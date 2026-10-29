@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Desafio de 7 Dias para Desinchar a Barriga</title>
+  <meta name="description"
+    content="Organize suas refeições com sugestões práticas, receitas variadas e um planejamento alimentar de 7 dias. Material digital.">
+  <meta name="theme-color" content="#4A1521">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Desafio de 7 Dias para Desinchar a Barriga">
+  <meta property="og:description"
+    content="Planejamento alimentar de 7 dias, receitas práticas e lista de compras organizada.">
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%234A1521'/%3E%3Cpath d='M8 24C8 15 13 9 24 8c0 11-6 16-16 16z' fill='%23F9E8EF'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="vendas.css">
+  <script src="vendas.js" defer></script>
+</head>
+
+<body>
+  <main>
+
+    <!-- 1. PRIMEIRA DOBRA -->
+    <section class="hero">
+      <div class="wrap hero__grid">
+        <div>
+          <p class="tag">Material digital</p>
+          <h1>Desafio de 7 Dias para Desinchar a Barriga</h1>
+          <p class="sub">Organize suas refeições com sugestões práticas, receitas variadas e um planejamento alimentar
+            de 7 dias.</p>
+          <ul class="ticks">
+            <li>Planejamento alimentar de 7 dias</li>
+            <li>Sugestões de receitas práticas</li>
+            <li>Lista de compras organizada</li>
+            <br>
+            <p> <i>De R$89,90 por</i> </p>
+          </ul>
+          <p class="promo" hidden><span>De <s data-regular></s> por</span><span>Oferta válida até <time
+                data-end></time></span><span class="timer" data-timer role="timer" aria-live="off"></span></p>
+          <p class="price"><strong>R$ 17,90</strong></p>
+          <button type="button" id="hero-cta" class="btn" data-cta>QUERO ACESSAR O GUIA</button>
+          <p class="cta-msg" role="status"></p>
+        </div>
+        <figure class="cover-wrap">
+          <img class="cover-img" src="./capa-desafio.webp" width="547" height="805" fetchpriority="high"
+            alt="Capa do guia Desafio de 7 Dias para Desinchar a Barriga">
+        </figure>
+      </div>
+    </section>
+
+    <!-- 2. CONTINUIDADE DO QUIZ -->
+    <section class="band">
+      <div class="wrap narrow">
+        <h2>Das suas respostas para a prática</h2>
+        <p>Agora você pode transformar suas respostas em pequenos passos para organizar sua rotina.</p>
+        <p id="quiz-note"></p>
+      </div>
+    </section>
+
+    <!-- 3. IDENTIFICAÇÃO -->
+    <section>
+      <div class="wrap narrow">
+        <h2>Organizar as refeições nem sempre é simples</h2>
+        <ul class="cards cards--1">
+          <li>Surgem dúvidas sobre o que preparar e como distribuir as refeições.</li>
+          <li>Falta tempo para pesquisar receitas e montar a lista de compras.</li>
+          <li>Transformar boas intenções em hábitos consistentes dá trabalho.</li>
+        </ul>
+        <p class="note">Cada pessoa é diferente e o inchaço pode ter várias causas. Este material não trata doenças.</p>
+      </div>
+    </section>
+
+    <!-- 4. CONTEÚDO REAL (aparece quando houver imagens em PREVIEWS no vendas.js) -->
+    <section id="previa" class="alt" hidden>
+      <div class="wrap">
+        <h2>Veja exemplos do material</h2>
+        <div id="previa-lista" class="previews"></div>
+      </div>
+    </section>
+
+    <!-- 5. BENEFÍCIOS E CONTEÚDO -->
+    <section class="alt-soft">
+      <div class="wrap">
+        <h2>Como o material ajuda no dia a dia</h2>
+        <div class="grid2 benefits">
+          <article class="box">
+            <div class="ico-wrap"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 6h14M5 12h14M5 18h9" />
+              </svg></div>
+            <h3>O que está incluído</h3>
+            <p>Planejamento alimentar de 7 dias, sugestões de receitas, lista de compras, alternativas de substituição e
+              orientações gerais sobre hábitos.</p>
+          </article>
+          <article class="box">
+            <div class="ico-wrap"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="7" y="3" width="10" height="18" rx="2.5" />
+                <path d="M11 18h2" />
+              </svg></div>
+            <h3>Como consultar</h3>
+            <p>É um material digital, para você consultar no seu ritmo, na hora de planejar as compras ou de preparar as
+              refeições.</p>
+          </article>
+          <article class="box">
+            <div class="ico-wrap"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="4" y="5" width="16" height="15" rx="3" />
+                <path d="M8 3v4M16 3v4M4 10h16" />
+              </svg></div>
+            <h3>Menos decisões na hora das refeições</h3>
+            <p>Com a semana organizada e a lista de compras pronta, fica mais simples saber o que comprar e o que
+              preparar.</p>
+          </article>
+          <article class="box">
+            <div class="ico-wrap"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 8h9M18 8h1M5 16h1M10 16h9" />
+                <circle cx="16" cy="8" r="2" />
+                <circle cx="8" cy="16" r="2" />
+              </svg></div>
+            <h3>Adapte às suas preferências</h3>
+            <p>As alternativas de substituição ajudam a ajustar as sugestões ao que você gosta e ao que tem em casa.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. PROVAS SOCIAIS (só aparece com materiais reais configurados em vendas.js) -->
+    <section id="provas" hidden>
+      <div class="wrap">
+        <h2>Relatos de quem usou o material</h2>
+        <div id="provas-lista" class="proofs" role="region" aria-label="Relatos de clientes" tabindex="0"></div>
+      </div>
+    </section>
+
+    <!-- 7. PARA QUEM É -->
+    <section>
+      <div class="wrap narrow">
+        <h2>Para quem é</h2>
+        <ul class="ticks">
+          <li>Quer organizar melhor a alimentação e a rotina</li>
+          <li>Busca sugestões práticas de refeições e receitas</li>
+          <li>Prefere ter uma lista de compras pronta</li>
+          <li>Quer um roteiro simples para os próximos sete dias</li>
+        </ul>
+        <p class="note">Material educativo. Não substitui orientação profissional individualizada, quando necessária.
+        </p>
+      </div>
+    </section>
+
+    <!-- 8. OFERTA -->
+    <section id="oferta" class="offer">
+      <div class="wrap narrow center">
+        <img class="cover-img cover-img--sm" src="./capa-desafio.webp" width="547" height="805" loading="lazy"
+          alt="Capa do guia Desafio de 7 Dias para Desinchar a Barriga">
+        <h2>Desafio de 7 Dias para Desinchar a Barriga</h2>
+        <ul class="ticks ticks--light">
+          <li>Planejamento alimentar de 7 dias</li>
+          <li>Sugestões de receitas práticas</li>
+          <li>Lista de compras organizada</li>
+          <li>Alternativas de substituição</li>
+          <li>Orientações gerais sobre hábitos</li>
+        </ul>
+        <p class="promo" hidden><span>De <s data-regular></s> por</span><span>Oferta válida até <time
+              data-end></time></span><span class="timer" data-timer role="timer" aria-live="off"></span></p>
+        <p class="price price--big"><strong>R$ 17,90</strong></p>
+        <button type="button" class="btn btn--light" data-cta>QUERO ACESSAR O GUIA</button>
+        <p class="cta-msg" role="status"></p>
+        <p id="info-acesso" class="micro"></p>
+        <p id="info-garantia" class="micro"></p>
+
+        <div id="bumps" class="bumps" hidden>
+          <h3 class="bumps-title">Ofertas adicionais, opcionais</h3>
+          <p class="micro">Disponíveis no checkout, com preços separados. Não estão incluídas nos R$ 17,90.</p>
+          <ul id="bumps-lista" class="bumps-list"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. PAGAMENTO E GARANTIA (preenchido por vendas.js somente com dados confirmados) -->
+    <section id="pagamento" hidden>
+      <div class="wrap narrow">
+        <h2>Pagamento e garantia</h2>
+        <dl id="pagamento-lista" class="info"></dl>
+      </div>
+    </section>
+
+    <!-- 10. FAQ -->
+    <section class="alt">
+      <div class="wrap narrow">
+        <h2>Perguntas frequentes</h2>
+        <details>
+          <summary>O que está incluído no material?</summary>
+          <p>Planejamento alimentar de 7 dias, sugestões de receitas, lista de compras, alternativas de substituição e
+            orientações gerais sobre hábitos.</p>
+        </details>
+        <details data-faq="access">
+          <summary>Como recebo o produto?</summary>
+          <p></p>
+        </details>
+        <details data-faq="devices">
+          <summary>Em quais dispositivos posso consultar o arquivo?</summary>
+          <p></p>
+        </details>
+        <details>
+          <summary>Preciso seguir todas as sugestões?</summary>
+          <p>Não. As sugestões são um ponto de partida: você pode ajustar conforme suas preferências, sua rotina e suas
+            necessidades.</p>
+        </details>
+        <details>
+          <summary>O material substitui um nutricionista?</summary>
+          <p>Não. O material é educativo e traz orientações gerais. Para um plano individualizado, procure um
+            nutricionista ou outro profissional de saúde.</p>
+        </details>
+        <details data-faq="refund">
+          <summary>Como funciona a política de reembolso?</summary>
+          <p></p>
+        </details>
+      </div>
+    </section>
+
+    <!-- 11. CTA FINAL -->
+    <section class="final">
+      <div class="wrap narrow center">
+        <h2>Comece a organizar suas refeições</h2>
+        <p> <i>De R$89,90 por</i> </p>
+        <p class="promo" hidden><span>De <s data-regular></s> por</span><span>Oferta válida até <time
+              data-end></time></span><span class="timer" data-timer role="timer" aria-live="off"></span></p>
+        <p class="price"><strong>R$ 17,90</strong></p>
+        <button type="button" class="btn" data-cta>QUERO ACESSAR O GUIA</button>
+        <p class="cta-msg" role="status"></p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap narrow">
+      <p id="rodape-id"></p>
+      <nav id="rodape-links" aria-label="Documentos"></nav>
+      <p class="micro">Este material é educativo e não substitui acompanhamento médico ou nutricional individualizado.
+        Resultados variam de pessoa para pessoa e não são garantidos.<br>© 2026 Desafio de 7 Dias para Desinchar a
+        Barriga. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <div id="sticky" class="sticky" hidden>
+    <strong>R$ 17,90</strong>
+    <button type="button" class="btn" data-cta>QUERO ACESSAR O GUIA</button>
+    <p class="cta-msg" role="status"></p>
+  </div>
+</body>
+
+</html>

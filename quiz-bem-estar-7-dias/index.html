@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#4A1521">
+  <meta name="description" content="Responda algumas perguntas rápidas e conheça uma proposta de bem-estar alinhada à sua rotina e aos seus objetivos.">
+  <title>Diagnóstico de bem-estar | Programa de 7 dias</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%234A1521'/%3E%3Cpath d='M8 24C8 15 13 9 24 8c0 11-6 16-16 16z' fill='%23F9E8EF'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Ir para o conteúdo</a>
+
+  <!-- Ícones SVG inline (sem dependências externas) -->
+  <svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <symbol id="icon-leaf" viewBox="0 0 24 24"><path d="M5 19c0-8 5-14 14-14 0 9-6 14-14 14Z"/><path d="M5 19c3-4 6-7 10-9"/></symbol>
+    <symbol id="icon-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="icon-check-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.5 2.5 4.5-5"/></symbol>
+    <symbol id="icon-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+    <symbol id="icon-calendar" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="3"/><path d="M8 3v4M16 3v4M4 10h16"/></symbol>
+    <symbol id="icon-route" viewBox="0 0 24 24"><circle cx="6" cy="18" r="2"/><circle cx="18" cy="6" r="2"/><path d="M8 18h6a3 3 0 0 0 0-6h-4a3 3 0 0 1 0-6h6"/></symbol>
+    <symbol id="icon-chart" viewBox="0 0 24 24"><path d="M4 19V5M4 19h16M8 15l4-4 3 3 5-6"/></symbol>
+  </svg>
+
+  <div class="page">
+    <header class="site-header">
+      <div class="brand-mark" aria-hidden="true">
+        <svg class="icon"><use href="#icon-leaf"/></svg>
+      </div>
+      <h1 class="sr-only">Diagnóstico de bem-estar</h1>
+      <button type="button" id="btn-header-restart" class="btn btn--ghost btn--small" hidden>Recomeçar</button>
+    </header>
+
+    <main id="main" class="stage">
+      <noscript>
+        <p class="error-box">Este diagnóstico precisa de JavaScript para funcionar. Ative o JavaScript no navegador e recarregue a página.</p>
+      </noscript>
+
+      <p id="app-error" class="error-box" role="alert" hidden>
+        Não foi possível carregar o diagnóstico. Atualize a página e tente novamente.
+      </p>
+
+      <!-- ===== Tela de introdução ===== -->
+      <section id="screen-intro" class="screen" aria-labelledby="intro-title" hidden>
+        <div class="card" data-animate>
+          <div class="steps-hint">
+            <div class="steps-hint__dots" aria-hidden="true">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <span class="steps-hint__text">7 perguntas rápidas</span>
+          </div>
+
+          <h2 id="intro-title" class="screen-title screen-title--xl" tabindex="-1">Vamos descobrir o que combina com sua rotina?</h2>
+          <p class="lead">Responda algumas perguntas rápidas para conhecer uma proposta de bem-estar alinhada aos seus objetivos.</p>
+
+          <ul class="meta-list">
+            <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-clock"/></svg><span>Leva cerca de 1 minuto</span></li>
+            <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-check-circle"/></svg><span>Respostas simples e rápidas</span></li>
+          </ul>
+
+          <button type="button" id="btn-start" class="btn btn--primary btn--cta btn--block">COMEÇAR MEU DIAGNÓSTICO</button>
+          <p class="fineprint">Suas respostas ficam apenas neste navegador. Este diagnóstico não é uma avaliação médica.</p>
+        </div>
+      </section>
+
+      <!-- ===== Tela de pergunta (conteúdo montado pelo script.js) ===== -->
+      <section id="screen-question" class="screen" aria-labelledby="question-title" hidden>
+        <div class="progress">
+          <p id="progress-text" class="progress__text">Pergunta 1 de 7</p>
+          <div id="progress-track" class="progress__track" role="progressbar" aria-label="Progresso do diagnóstico" aria-valuemin="1" aria-valuemax="7" aria-valuenow="1" aria-valuetext="Pergunta 1 de 7">
+            <div id="progress-fill" class="progress__fill"></div>
+          </div>
+        </div>
+
+        <div class="card" data-animate>
+          <h2 id="question-title" class="screen-title" tabindex="-1"></h2>
+          <p id="question-hint" class="question-hint"></p>
+          <div id="options" class="options" role="radiogroup" aria-labelledby="question-title" aria-describedby="question-hint"></div>
+        </div>
+
+        <div class="nav">
+          <button type="button" id="btn-back" class="btn btn--ghost">Voltar</button>
+          <button type="button" id="btn-next" class="btn btn--primary btn--next" disabled>Continuar</button>
+        </div>
+      </section>
+
+      <!-- ===== Tela de resultado ===== -->
+      <section id="screen-result" class="screen" aria-labelledby="result-title" hidden>
+        <article class="card" data-animate>
+          <h2 id="result-title" class="screen-title screen-title--xl" tabindex="-1">Seu próximo passo começa com uma rotina possível</h2>
+          <p id="result-summary" class="lead"></p>
+
+          <dl id="result-answers" class="answer-summary"></dl>
+
+          <h3 class="section-title">O que pode ajudar você a começar</h3>
+          <ul id="result-tips" class="tips"></ul>
+        </article>
+
+        <article class="card card--program" aria-labelledby="program-title" data-animate>
+          <h3 id="program-title" class="program__title">Conheça o Programa de Bem-Estar de 7 Dias</h3>
+          <p class="program__text">Um programa digital com orientações organizadas para ajudar você a estruturar uma rotina de autocuidado, respeitando sua disponibilidade e seus objetivos.</p>
+
+          <ul id="program-features" class="feature-list"></ul>
+
+          <p id="start-note" class="program__note"></p>
+
+          <button type="button" id="btn-cta" class="btn btn--light btn--cta btn--block">QUERO CONHECER O PROGRAMA</button>
+          <p id="cta-message" class="cta-message" role="status" aria-live="polite"></p>
+        </article>
+
+        <p class="disclaimer">Este diagnóstico e o programa não substituem avaliação ou orientação profissional de saúde, quando necessária.</p>
+
+        <button type="button" id="btn-restart" class="btn btn--ghost btn--block">Recomeçar diagnóstico</button>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

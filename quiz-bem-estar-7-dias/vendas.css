@@ -1,0 +1,140 @@
+/* Página de vendas — Desafio de 7 Dias. CSS puro, fontes do sistema. */
+:root{--bg:#FFF9FA;--wine:#4A1521;--wine2:#310B17;--pink:#D93678;--soft:#F9E8EF;--text:#292329;--muted:#6D6268;--line:#EADCE2;--r:16px;
+--gold:#B58A4B;--font:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;--head:"Iowan Old Style","Palatino Linotype",Georgia,serif}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:1rem/1.6 var(--font);overflow-x:hidden;overflow-x:clip;-webkit-tap-highlight-color:transparent}
+[hidden]{display:none!important}
+h1,h2,h3,p,ul,ol,dl,dd,figure{margin:0}
+ul,ol{padding:0;list-style:none}
+h1,h2,h3{font-family:var(--head);color:var(--wine);line-height:1.18;letter-spacing:-.01em;text-wrap:balance}
+h1{font-size:clamp(1.65rem,6.2vw,2.5rem)}
+h2{font-size:clamp(1.45rem,5vw,2rem);margin-bottom:1rem}
+h3{font-size:1.125rem}
+section{padding:clamp(2.25rem,7vw,4rem) 0}
+.wrap{width:min(100% - 2.5rem,68rem);margin:0 auto}
+.narrow{max-width:42rem}
+.center{text-align:center}
+.alt{background:var(--soft)}
+.band{background:#fff;border-block:1px solid var(--line)}
+.band p+p{margin-top:.5rem}
+.note,.micro{color:var(--muted);font-size:.875rem}
+.note{margin-top:1rem}
+.micro{margin-top:.75rem}
+
+/* Botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;width:100%;min-height:3.5rem;padding:0 1rem;border:0;border-radius:14px;background:var(--wine);color:#fff;font:700 clamp(.9375rem,4vw,1.0625rem)/1.2 var(--font);letter-spacing:.03em;cursor:pointer;box-shadow:0 10px 22px -12px rgba(74,21,33,.65);transition:background-color .18s,transform .18s}
+.btn:hover{background:var(--wine2);transform:translateY(-1px)}
+.btn:focus-visible{outline:3px solid var(--pink);outline-offset:3px}
+.btn--light{background:#fff;color:var(--wine)}
+.btn--light:hover{background:var(--soft)}
+.cta-msg{margin-top:.5rem;font-size:.875rem;color:var(--wine)}
+.cta-msg:empty{display:none}
+.offer .cta-msg{color:var(--soft)}
+
+/* Hero */
+.hero{padding-top:1.5rem}
+.hero__grid{display:grid;gap:1.5rem}
+.tag{display:inline-block;margin-bottom:.75rem;padding:.25rem .75rem;border-radius:999px;background:var(--soft);color:var(--wine);font-size:.875rem;font-weight:600}
+.sub{margin-top:.75rem;color:var(--muted);font-size:1.0625rem}
+.ticks{display:grid;gap:.5rem;margin:1rem 0}
+.ticks li{position:relative;padding-left:1.75rem}
+.ticks li::before{content:"";position:absolute;left:.25rem;top:.45rem;width:.55rem;height:.3rem;border-left:2.5px solid var(--pink);border-bottom:2.5px solid var(--pink);transform:rotate(-45deg)}
+.price{margin:.5rem 0 1rem;font-size:1.25rem}
+.price strong{font-family:var(--head);font-size:2rem;color:var(--wine)}
+.cover-wrap{display:grid;justify-items:center;gap:.5rem;order:-1}
+.cover-wrap figcaption{color:var(--muted);font-size:.8125rem}
+.cover-img{display:block;width:min(62%,15rem);height:auto;border-radius:6px 12px 12px 6px;box-shadow:-5px 0 0 var(--wine2),0 22px 40px -22px rgba(49,11,23,.7)}
+.cover-img--sm{width:9rem;margin:0 auto 1.25rem}
+.mini-img{display:block;width:3.5rem;height:auto;margin-bottom:.75rem;border-radius:3px 6px 6px 3px;box-shadow:-3px 0 0 var(--wine2)}
+.promo{display:flex;flex-wrap:wrap;align-items:center;gap:.25rem .75rem;margin-top:.5rem;color:var(--muted);font-size:.9375rem}
+.promo s{font-weight:600}
+.timer{padding:.1rem .6rem;border-radius:8px;background:var(--soft);color:var(--wine);font-weight:700;font-variant-numeric:tabular-nums}
+.offer .promo{justify-content:center;color:var(--soft)}
+.offer .timer{background:#fff}
+
+/* Cards */
+.cards{display:grid;gap:.75rem}
+.cards>li,.box{padding:1rem 1.1rem;border:1px solid var(--line);border-radius:var(--r);background:#fff}
+.days{grid-template-columns:1fr}
+.days li{display:grid;grid-template-columns:2.5rem 1fr;column-gap:.9rem}
+.days b{grid-row:span 2;display:grid;place-items:center;width:2.5rem;height:2.5rem;border-radius:50%;background:var(--soft);color:var(--wine);font-family:var(--head);font-size:1.25rem}
+.days p,.box p{color:var(--muted);font-size:.9375rem}
+.grid2{display:grid;gap:1rem}
+.mini{display:grid;place-items:center;width:3rem;height:3.75rem;margin-bottom:.75rem;border-radius:6px 10px 10px 6px;background:var(--wine);color:#fff;font-weight:700;font-size:.8125rem}
+.provas-item img{display:block;width:100%;height:auto;border-radius:12px}
+.provas-item figcaption{margin-top:.5rem;color:var(--muted);font-size:.875rem}
+
+/* Oferta */
+.offer{background:var(--wine);color:#fff}
+.offer h2,.offer .price strong{color:#fff}
+.offer .micro{color:rgba(255,255,255,.85)}
+.ticks--light{justify-content:center;width:fit-content;margin-inline:auto;text-align:left}
+.ticks--light li::before{border-color:var(--soft)}
+
+/* Pagamento, FAQ, rodapé */
+.info{display:grid;gap:.75rem}
+.info div{padding:.9rem 1.1rem;border:1px solid var(--line);border-radius:var(--r);background:#fff}
+.info dt{font-weight:700;color:var(--wine)}
+details{margin-bottom:.6rem;border:1px solid var(--line);border-radius:12px;background:#fff}
+summary{padding:.9rem 1.1rem;font-weight:600;cursor:pointer}
+summary:focus-visible{outline:3px solid var(--pink);outline-offset:2px;border-radius:12px}
+details p{padding:0 1.1rem 1rem;color:var(--muted)}
+.final{background:#fff;border-top:1px solid var(--line)}
+.final p+p{margin-top:.5rem}
+footer{padding:2rem 0 calc(6rem + env(safe-area-inset-bottom));border-top:1px solid var(--line);font-size:.875rem;color:var(--muted)}
+#rodape-links{display:flex;flex-wrap:wrap;gap:.5rem 1.25rem;margin:.75rem 0}
+#rodape-links a{color:var(--wine)}
+
+/* CTA fixo (somente celular) */
+.sticky{position:fixed;inset:auto 0 0 0;z-index:20;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem .75rem;padding:.6rem 1rem calc(.6rem + env(safe-area-inset-bottom));background:#fff;border-top:1px solid var(--line);box-shadow:0 -8px 24px -16px rgba(74,21,33,.4)}
+.sticky strong{font:700 1.25rem var(--head);color:var(--wine)}
+.sticky .btn{flex:1;min-height:3rem}
+.sticky .cta-msg{flex-basis:100%;margin:0}
+
+@media (min-width:48rem){
+  .hero__grid{grid-template-columns:1.25fr 1fr;align-items:center;gap:3rem}
+  .cover-wrap{order:0}
+  .btn{width:auto;min-width:20rem}
+  .center .btn{min-width:22rem}
+  .days{grid-template-columns:repeat(2,1fr)}
+  .grid2{grid-template-columns:repeat(2,1fr)}
+  .sticky{display:none!important}
+  footer{padding-bottom:2rem}
+}
+@media (prefers-reduced-motion:reduce){*{transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+/* Detalhes dourados discretos */
+.tag{border:1px solid #D9BC8C}
+.center h2::after{content:"";display:block;width:2.5rem;height:2px;margin:.75rem auto 0;background:var(--gold)}
+/* Benefícios, prévias e ofertas adicionais */
+.alt-soft{background:var(--soft)}
+.ico-wrap{display:grid;place-items:center;width:2.75rem;height:2.75rem;margin-bottom:.75rem;border-radius:14px;background:var(--soft);color:var(--wine)}
+.alt-soft .ico-wrap{background:#fff}
+.ico{width:1.5rem;height:1.5rem;fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+.previews{display:grid;gap:1rem}
+.previews figure{margin:0}
+.previews img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:12px;background:#fff}
+.previews figcaption{margin-top:.5rem;color:var(--muted);font-size:.875rem}
+.bumps{margin-top:2rem;padding-top:1.5rem;border-top:1px solid rgba(249,232,239,.25);text-align:left}
+.bumps-title{color:#fff;font-size:1.125rem}
+.bumps-list{display:grid;gap:.75rem;margin-top:1rem}
+.bumps-list li{padding:.9rem 1.1rem;border-radius:var(--r);background:#fff;color:var(--text)}
+.bumps-list strong{display:block;margin-top:.25rem;color:var(--wine)}
+.bumps-list span{color:var(--muted);font-size:.9375rem}
+@media (min-width:48rem){.previews{grid-template-columns:repeat(3,1fr)}}
+
+/* Capa menor no celular: título, preço e botão precisam caber na primeira tela */
+@media (max-width:47.99rem){.hero .cover-img{width:min(40%,9.5rem)}.hero{padding-top:1rem}}
+
+/* Provas sociais: espaços no formato de post do Instagram (altere --proof-ratio para 1/1 se preferir quadrado) */
+.proofs{--proof-ratio:4/5;display:flex;gap:.875rem;margin:0 -1.25rem;padding:.25rem 1.25rem 1rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:thin}
+.proofs:focus-visible{outline:3px solid var(--pink);outline-offset:2px}
+.proof{flex:0 0 78%;max-width:20rem;margin:0;scroll-snap-align:center}
+.proof__frame{aspect-ratio:var(--proof-ratio);overflow:hidden;border:1px solid var(--line);border-radius:12px;background:#fff;display:grid;place-items:center}
+.proof__frame img{display:block;width:100%;height:100%;object-fit:contain}
+.proof__frame--empty{border:2px dashed #D9BC8C;background:var(--soft);color:var(--muted);text-align:center;font-size:.875rem;white-space:pre-line;padding:1rem}
+.proof figcaption{margin-top:.5rem;color:var(--muted);font-size:.875rem}
+.edit-note{margin-bottom:.75rem;padding:.5rem .75rem;border-radius:10px;background:#FFF4DC;color:#6B4E12;font-size:.875rem}
+@media (min-width:48rem){.proofs{display:grid;grid-template-columns:repeat(2,1fr);margin:0;padding:0;overflow:visible}.proof{max-width:none}}
+@media (min-width:64rem){.proofs{grid-template-columns:repeat(4,1fr)}}
